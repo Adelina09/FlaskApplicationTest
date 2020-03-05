@@ -1,0 +1,38 @@
+{%extends "layout.html"%}
+
+
+    {%block body%}
+
+<h1 align=middle>Home Page</h1>
+<br />
+<h2>Holiday</h2>
+<img style="padding-right: 15px; float: left;"
+src=https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/04/11/12/package-holiday-credit-grafner.jpg?w968h681' width='350' height='220'>
+<p>
+    &#160 &#160 &#160 We all want a holiday every now and then. The issues arise when you start looking for one. 
+    This website aims to deliver a personalised experience by making the decison for you. 
+    The page will not ask you for your preferred activities, choose one of these by
+    selecting an input from the drop down list.
+</p>
+<br />
+<label for="activities">Choose an activity:</label>
+<select id="activities">
+    <option value="ski">Skiing</option>
+    <option value="bungee jumping">Bungee Jumping</option>
+    <option value="swim">Swimming</option>
+    <option value="climb">Climbing</option>
+    <option value="sunbathe">Sunbathing</option>
+    <option value="relax">Relax</option>
+</select>
+<textarea name="message" rows="2" cols="40">
+   
+    </textarea>
+    <button type="button" onclick="alert('Thank You!')">Add</button>
+
+    {%for i in info1%}
+        <li><a>{{ i[1] }}</a></li>
+    {%endfor%}
+
+
+{%endblock%}
+
